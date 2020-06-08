@@ -9,12 +9,15 @@ cml:
     script:
         - apt-get --purge remove -y dvc
         - pip install "git+https://github.com/iterative/dvc#egg=dvc[s3]"
+        
         - pip install -r requirements.txt
+        
         - dvc pull data
         - dvc repro
         - git fetch --prune --unshallow
         - dvc metrics diff --show-md master >> report.md
         - echo >> report.md
+        
         - dvc plots diff --target loss.csv --show-vega master > vega.json
         - vl2png vega.json -s 1.5 | cml-publish --md --title "loss plot" >> report.md
         - cml-send-comment report.md 
