@@ -19,6 +19,6 @@ cml:
     # Visualize loss function diff
     - dvc plots diff 
       --target loss.csv --show-vega master > vega.json
-    - vl2png vega.json | cml-publish --md >> report.md
+    - vl2png vega.json -s 2 | cml-publish --md >> report.md
     - cml-send-comment report.md
         
