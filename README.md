@@ -17,7 +17,9 @@ In this example, three CI/CD variables must be set.
 | AWS_ACCESS_KEY_ID  | AWS credential for accessing S3 storage  | 
 | AWS_SECRET_ACCESS_KEY | AWS credential for accessing S3 storage |
 
-DVC works with many kinds of remote storage. To configure this example for a different cloud storage provider, see our [documentation on the CML repository](https://github.com/iterative/cml#using-cml-with-dvc).
+⚠️ Variables should be masked but not protected.
+
+While this example uses AWS S3, DVC works with many kinds of remote storage. To configure this example for a different cloud storage provider, see our [documentation on the CML repository](https://github.com/iterative/cml#using-cml-with-dvc).
 
 ## Cloning this project
 Note that if you clone this project, you will have to configure your own DVC storage and credentials for the example. We suggest the following procedure:
