@@ -11,7 +11,7 @@ The key file enabling these actions is `.gitlab-ci.yml`.
 ## Secrets and environmental variables
 In this example, three CI/CD variables must be set. 
 
-| Secret  | Description  | 
+| Variable  | Description  | 
 |---|---|
 |  repo_token | A personal access token with api, read_repository and write_repository privileges.  |
 | AWS_ACCESS_KEY_ID  | AWS credential for accessing S3 storage  | 
